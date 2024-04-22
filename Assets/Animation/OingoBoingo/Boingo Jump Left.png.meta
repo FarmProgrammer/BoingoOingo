@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b12b56fd885438a4aa6df5df7e0e6686
+guid: 10a6c9bf1fe4fcd4ca59a86ee98f3b27
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,11 +107,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boingo_Idle_left_0
+      name: Boingo Jump Left_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 42
+        height: 52
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe92928919260ff4992a7bdd2bd2917a
-      internalID: -233319227
+      spriteID: aac6e23c701bec8499ac7f28a0e4d8e8
+      internalID: 756084498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boingo_Idle_left_1
+      name: Boingo Jump Left_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 42
+        height: 52
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc0498dc877747419b79c482bfd403d
-      internalID: 582810222
+      spriteID: 119cf1c1c3e1ab541910eb3e186822e0
+      internalID: 2121602637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boingo_Idle_left_2
+      name: Boingo Jump Left_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 42
+        height: 52
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,113 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce8f235ad7c5b7b439c53dee4b598a80
-      internalID: -649640014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boingo_Idle_left_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1c8ce9571343314aa164cf7e16048c9
-      internalID: 59933233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boingo_Idle_left_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edb2db39d6c4cbd40a7f58efdac35b42
-      internalID: -1299744274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boingo_Idle_left_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f4629ed151b9104d97d7191b44316e4
-      internalID: 1666069542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boingo_Idle_left_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c745df51eeb0b645bbbf34cd1241df2
-      internalID: 95003907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boingo_Idle_left_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 42
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a48e1cf0db88ddd46a590b0442ced42d
-      internalID: 147082997
+      spriteID: c1a8970a3c2c77042934b6e6947c4af0
+      internalID: 1026553332
       vertices: []
       indices: 
       edges: []
@@ -301,14 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boingo_Idle_left_0: -233319227
-      Boingo_Idle_left_1: 582810222
-      Boingo_Idle_left_2: -649640014
-      Boingo_Idle_left_3: 59933233
-      Boingo_Idle_left_4: -1299744274
-      Boingo_Idle_left_5: 1666069542
-      Boingo_Idle_left_6: 95003907
-      Boingo_Idle_left_7: 147082997
+      Boingo Jump Left_0: 756084498
+      Boingo Jump Left_1: 2121602637
+      Boingo Jump Left_2: 1026553332
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
