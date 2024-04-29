@@ -62,7 +62,7 @@ public class MonocycleControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(transform.position+Vector3.down, 0.5f, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(transform.position+Vector3.down, groundCheckRadius, groundLayer);
         if (isGrounded)
         {
             anim.SetTrigger("Land");
