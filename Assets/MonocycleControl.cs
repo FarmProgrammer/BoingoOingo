@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonocycleControl : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class MonocycleControl : MonoBehaviour
 
     public Vector3 groundCheckOffset = Vector3.down;
     public float groundCheckRadius = 0.5f;
+    public Slider jumpMeter;
 
+    private Animator anim;
     private Rigidbody2D rb; // Reference to the clown's Rigidbody component
     private bool isGrounded; // Flag to track if the clown is grounded
     public LayerMask groundLayer;
@@ -25,17 +28,22 @@ public class MonocycleControl : MonoBehaviour
         // Get the Rigidbody component attached to the clown
         rb = GetComponent<Rigidbody2D>();
         rb.centerOfMass = Vector3.zero;
+        anim = GetComponent<Animator>();
+        jumpMeter.maxValue = 1;
     }
 
     void Update()
     {
         // Handle player input for movement
         horizontalInput = Input.GetAxis("Horizontal");
+        anim.SetFloat("speed", rb.velocity.x);
 
+        jumpMeter.value=Mathf.Lerp(0f, 1f, jumpTime / maxJumpTime);
         // Handle jumping
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpTime = 0f;
+            jumpMeter.gameObject.SetActive(true);
         }
 
         if (Input.GetKey(KeyCode.Space) && isGrounded && jumpTime < maxJumpTime)
@@ -45,15 +53,27 @@ public class MonocycleControl : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
         {
+            jumpMeter.gameObject.SetActive(false);
             Jump();
+            anim.ResetTrigger("Land");
+            anim.SetTrigger("Jump");
         }
     }
 
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(transform.position+Vector3.down, 0.5f, groundLayer);
+        if (isGrounded)
+        {
+            anim.SetTrigger("Land");
+        }
 
         Vector2 movement = new Vector2(horizontalInput * movementSpeed, 0);
+
+        if (horizontalInput != 0)
+        {
+            anim.SetFloat("Orientation", horizontalInput);
+        }
 
         float tiltAmount = 0f;
         if (isGrounded)
